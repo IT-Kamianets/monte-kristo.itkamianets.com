@@ -1,0 +1,44 @@
+.content-wrapper {
+  min-height: calc(100vh - 200px); /* Гарантує, що футер буде внизу навіть на коротких сторінках */
+  padding-top: 80px; /* Місце під фіксований Header */
+}
+
+.main-footer {
+  background-color: #1a1a1b;
+  color: #ffffff;
+  padding: 50px 10% 20px;
+  border-top: 1px solid #c5a059;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.footer-info h3 {
+  font-family: 'Playfair Display', serif;
+  color: #c5a059;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.footer-contacts a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  font-size: 0.8rem;
+  color: #777;
+}

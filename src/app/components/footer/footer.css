@@ -1,0 +1,89 @@
+.footer {
+  background-color: #0a0a0a;
+  color: #aaa;
+  padding: 60px 0 20px;
+  border-top: 1px solid #333;
+  margin-top: auto; /* Притискає футер до низу */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+/* Заголовки */
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  color: #c5a059;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-left: 3px solid #c5a059;
+  padding-left: 10px;
+}
+
+/* Контакти */
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.contact-list a {
+  color: #aaa;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-list a:hover {
+  color: #c5a059;
+}
+
+/* Карта (стилізація) */
+.map-wrapper {
+  border: 1px solid #333;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 200px;
+}
+
+/* Робимо карту чорно-білою, щоб не різала очі */
+.map-wrapper iframe {
+  filter: grayscale(100%) invert(90%) contrast(85%);
+  transition: filter 0.5s;
+}
+
+.map-wrapper:hover iframe {
+  filter: none; /* При наведенні стає кольоровою */
+}
+
+/* Нижній рядок */
+.footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #1a1a1a;
+  font-size: 0.8rem;
+}

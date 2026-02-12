@@ -1,0 +1,66 @@
+.contacts-section {
+  padding: 80px 10%;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.contacts-container {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #c5a059;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-weight: 300;
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+.details .item {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.details strong {
+  display: block;
+  color: #c5a059;
+  margin-bottom: 5px;
+}
+
+.map-box {
+  flex: 1;
+  width: 100%;
+}
+
+.map-placeholder {
+  height: 350px;
+  background-color: #2a2a2a;
+  border: 1px solid #c5a059;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 4px;
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 850px) {
+  .contacts-container {
+    flex-direction: column;
+  }
+  
+  .map-box {
+    width: 100%;
+  }
+}

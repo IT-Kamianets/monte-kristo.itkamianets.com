@@ -1,0 +1,30 @@
+<section class="rooms-page">
+  <div class="container">
+    <h1 class="page-title">Наші Номери</h1>
+    
+    <div class="rooms-grid">
+      <div class="room-card" *ngFor="let room of rooms">
+        
+        <div class="room-image">
+          <img [src]="room.image" [alt]="room.title">
+        </div>
+        
+        <div class="room-details">
+          <div class="room-header">
+            <h2>{{ room.title }}</h2>
+            <span class="price">{{ room.price }} <small>/ ніч</small></span>
+          </div>
+          
+          <p class="desc">{{ room.desc }}</p>
+          
+          <ul class="features">
+            <li *ngFor="let f of room.features">✓ {{ f }}</li>
+          </ul>
+
+          <a routerLink="/booking" class="btn-book">Забронювати</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

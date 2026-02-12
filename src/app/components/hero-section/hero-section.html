@@ -1,0 +1,55 @@
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="fade-in">MONTE CRISTO</h1>
+    <p class="subtitle fade-in-delay">Розкіш, на яку ви заслуговуєте</p>
+    <a routerLink="/booking" class="btn-gold fade-in-delay">Забронювати номер</a>
+  </div>
+</section>
+
+<section class="section about-section">
+  <div class="container">
+    <h2 class="section-title">Про нас</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          Готель <strong>"Монте-Крісто"</strong> розташований у самому серці історичного Кам'янця-Подільського. 
+          Ми поєднали старовинну архітектуру з сучасним комфортом, щоб створити ідеальне місце для вашого відпочинку.
+        </p>
+        <p>
+          Всього 5 хвилин ходьби до Старої фортеці, тиха вулиця П'ятницька та неперевершена атмосфера спокою.
+        </p>
+      </div>
+      </div>
+  </div>
+</section>
+
+<section class="section features-section">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-card" *ngFor="let item of features">
+        <div class="feature-icon">{{ item.icon }}</div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section reviews-section">
+  <div class="container">
+    <h2 class="section-title">Що кажуть гості</h2>
+    <div class="reviews-grid">
+      <div class="review-card" *ngFor="let review of reviews">
+        <div class="stars">{{ review.rating }}</div>
+        <p class="review-text">"{{ review.text }}"</p>
+        <h4 class="review-author">{{ review.name }}</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Готові до незабутнього відпочинку?</h2>
+  <a routerLink="/booking" class="btn-gold">Перевірити наявність місць</a>
+</section>

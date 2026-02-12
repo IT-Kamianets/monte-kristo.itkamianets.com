@@ -1,0 +1,70 @@
+.booking-section {
+  padding: 50px 20px;
+  background-color: #121212;
+  color: #fff;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking-container {
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+h2 {
+  color: #c5a059;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #c5a059;
+  font-size: 0.9rem;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 4px;
+}
+
+input:focus, select:focus {
+  border-color: #c5a059;
+  outline: none;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 15px;
+  background: #c5a059;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-primary:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+.success-message {
+  padding: 30px;
+  border: 1px solid #c5a059;
+  background: rgba(197, 160, 89, 0.1);
+}

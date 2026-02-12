@@ -1,0 +1,15 @@
+<section class="gallery-page">
+  <div class="container">
+    <h1 class="page-title">Атмосфера Monte Cristo</h1>
+    <p class="page-subtitle">Деталі, що створюють настрій</p>
+
+    <div class="gallery-grid">
+      <div class="gallery-item" *ngFor="let photo of photos">
+        <img [src]="photo.url" [alt]="photo.title" loading="lazy">
+        <div class="overlay">
+          <span>{{ photo.title }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

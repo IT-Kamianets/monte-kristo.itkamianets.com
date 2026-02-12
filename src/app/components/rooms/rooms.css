@@ -1,0 +1,154 @@
+.rooms-page {
+  padding: 50px 20px;
+  background-color: #121212;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page-title {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #c5a059;
+  margin-bottom: 60px;
+}
+
+.rooms-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.room-card {
+  display: flex;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  height: 350px; 
+}
+
+.room-image {
+  flex: 1;
+  min-width: 40%;
+  overflow: hidden;
+  position: relative;
+}
+
+.room-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.room-card:hover .room-image img {
+  transform: scale(1.05);
+}
+
+.room-details {
+  flex: 1.5;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.room-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 15px;
+}
+
+.room-header h2 {
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.price {
+  color: #c5a059;
+  font-size: 1.5rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.price small {
+  font-size: 0.9rem;
+  color: #888;
+  font-weight: normal;
+}
+
+.desc {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3; 
+  
+  overflow: hidden;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.features li {
+  color: #aaa;
+  font-size: 0.85rem;
+  background: #222;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #333;
+}
+
+.btn-book {
+  align-self: flex-start;
+  padding: 12px 30px;
+  background-color: transparent;
+  border: 1px solid #c5a059;
+  color: #c5a059;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.3s;
+  letter-spacing: 1px;
+}
+
+.btn-book:hover {
+  background-color: #c5a059;
+  color: #000;
+}
+
+@media (max-width: 900px) {
+  .room-card {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .room-image {
+    width: 100%;
+    height: 250px;
+  }
+
+  .room-details {
+    padding: 20px;
+  }
+}
