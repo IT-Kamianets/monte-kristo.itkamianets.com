@@ -1,39 +1,40 @@
-name: Deploy to GitHub Pages
+name: Deploy Angular to GitHub Pages
 
 on:
   push:
     branches:
-      - master  # Якщо ваша головна гілка називається 'main', змініть на 'main'
+      - master # Твоя головна гілка
 
 permissions:
-  contents: write
+  contents: write # Дозвіл на оновлення гілки gh-pages
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js ⚙️
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: '20'
           cache: 'npm'
 
-      - name: Install Dependencies 🔧
+      - name: Install dependencies
         run: npm ci
 
-      - name: Build 🏗️
-        # Збираємо проект
+      - name: Build project
+        # Збираємо проект для продакшну
         run: npm run build -- --configuration=production
 
-      - name: Deploy 🚀
+      - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          # ВАЖЛИВО: Перевірте, чи ваша папка dist називається саме так.
-          # У нових Angular (17+) це зазвичай dist/назва-проекту/browser
-          folder: dist/monte-cristo-hotel/browser
+          # ВАЖЛИВО: Перевір назву проекту в package.json. 
+          # Зазвичай шлях: dist/назва-проекту/browser
+          folder: dist/monte-cristo-hotel/browser 
           branch: gh-pages
-          # Ця опція автоматично візьме ваш файл CNAME і налаштує домен
+          # Твій домен
           cname: monte-kristo.itkamianets.com
