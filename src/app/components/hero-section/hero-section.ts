@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { BookingModalService } from '../../services/booking-modal.service';
 
 @Component({
   selector: 'app-hero-section',
@@ -10,6 +11,8 @@ import { RouterModule } from '@angular/router';
   styleUrl: './hero-section.css'
 })
 export class HeroSectionComponent {
+  constructor(private bookingModal: BookingModalService) {}
+  openBooking() { this.bookingModal.open(); }
   
   features = [
     { icon: '🏰', title: 'Біля Фортеці', text: '5 хвилин пішки до Старого замку' },

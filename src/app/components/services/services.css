@@ -1,38 +1,134 @@
-.services {
-  padding: 60px 20px;
+.services-page {
+  padding: 50px 20px 70px;
   background-color: #121212;
-  text-align: center;
+  min-height: 100vh;
   color: #fff;
 }
 
-.services h2 {
-  color: #c5a059;
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.page-title {
   font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-
-.services-grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.service-card {
-  background: #1a1a1b;
-  padding: 30px;
-  width: 250px;
-  border: 1px solid #333;
-  transition: 0.3s;
-}
-
-.service-card:hover {
-  border-color: #c5a059;
-  transform: translateY(-5px);
-}
-
-.icon {
   font-size: 3rem;
-  margin-bottom: 15px;
+  color: #c5a059;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.popular-bar {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 24px 28px;
+  margin-bottom: 50px;
+}
+
+.popular-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #c5a059;
+  margin: 0 0 16px;
+  font-weight: 600;
+}
+
+.popular-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+}
+
+.popular-item {
+  font-size: 14px;
+  color: #ddd;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.category-card {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  padding: 20px 24px;
+  transition: border-color 0.2s;
+}
+
+.category-card:hover {
+  border-color: #c5a059;
+}
+
+.category-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #2e2e2e;
+}
+
+.category-note {
+  font-size: 13px;
+  color: #aaa;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 5px 0;
+  font-size: 14px;
+  color: #ccc;
+  border-bottom: 1px solid #222;
+}
+
+.category-list li:last-child {
+  border-bottom: none;
+}
+
+.check {
+  color: #c5a059;
+  flex-shrink: 0;
+}
+
+.item-label {
+  flex: 1;
+}
+
+.item-extra {
+  font-size: 11px;
+  color: #888;
+  white-space: nowrap;
+  background: #252525;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
 }

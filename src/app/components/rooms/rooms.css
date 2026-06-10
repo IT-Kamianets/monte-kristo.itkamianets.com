@@ -69,10 +69,11 @@
   padding-bottom: 15px;
 }
 
-.room-header h2 {
+.room-header h2,
+.room-details h2 {
   font-family: 'Playfair Display', serif;
   color: #fff;
-  margin: 0;
+  margin: 0 0 12px;
   font-size: 1.8rem;
 }
 
@@ -119,8 +120,31 @@
   border: 1px solid #333;
 }
 
+.room-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-details {
+  padding: 12px 24px;
+  background-color: transparent;
+  border: 1px solid #555;
+  color: #aaa;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.3s;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+}
+
+.btn-details:hover {
+  border-color: #c5a059;
+  color: #c5a059;
+}
+
 .btn-book {
-  align-self: flex-start;
   padding: 12px 30px;
   background-color: transparent;
   border: 1px solid #c5a059;

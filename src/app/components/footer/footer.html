@@ -1,12 +1,24 @@
 <footer class="footer">
   <div class="footer-container">
-    
+
     <div class="footer-col brand-col">
+      <img src="assets/logo.png" alt="Monte Cristo" class="footer-logo-img">
       <h2 class="footer-logo">MONTE CRISTO</h2>
       <p class="footer-desc">
-        Готель, де історія зустрічається з комфортом. 
+        Готель, де історія зустрічається з комфортом.
         Ідеальне місце для вашого відпочинку у серці Кам'янця.
       </p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Навігація</h3>
+      <ul class="nav-list">
+        <li><a routerLink="/">Головна</a></li>
+        <li><a routerLink="/rooms">Номери</a></li>
+        <li><a routerLink="/services">Послуги</a></li>
+        <li><a routerLink="/gallery">Галерея</a></li>
+        <li><a routerLink="/contacts">Контакти</a></li>
+      </ul>
     </div>
 
     <div class="footer-col contact-col">
@@ -14,32 +26,17 @@
       <ul class="contact-list">
         <li>
           <span class="icon">📍</span>
-          <span>м. Кам'янець-Подільський,<br>вул. П'ятницька, 11</span>
+          <a href="https://maps.app.goo.gl/Y7YiBjfU8Fc2QfJ5A" target="_blank" rel="noopener">
+            вулиця Лесі Українки, 22,<br>
+            Кам'янець-Подільський,<br>
+            Хмельницька область, 32301
+          </a>
         </li>
         <li>
           <span class="icon">📞</span>
-          <a href="tel:+380671234567">+38 (067) 123 45 67</a>
-        </li>
-        <li>
-          <span class="icon">✉️</span>
-          <a href="mailto:info@montecristo.com">info@montecristo.com</a>
+          <a href="tel:+380973009035">+38 (097) 300 90 35</a>
         </li>
       </ul>
-    </div>
-
-    <div class="footer-col map-col">
-      <h3>Ми на карті</h3>
-      <div class="map-wrapper">
-        <iframe 
-          width="100%" 
-          height="200" 
-          style="border:0; filter: grayscale(100%) invert(90%);" 
-          loading="lazy" 
-          allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://maps.google.com/maps?q=Монте-Крісто+Кам'янець-Подільський+вул+Лесі+Українки+22&t=&z=17&ie=UTF8&iwloc=&output=embed">
-        </iframe>
-      </div>
     </div>
 
   </div>

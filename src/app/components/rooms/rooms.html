@@ -10,18 +10,13 @@
         </div>
         
         <div class="room-details">
-          <div class="room-header">
-            <h2>{{ room.title }}</h2>
-            <span class="price">{{ room.price }} <small>/ ніч</small></span>
-          </div>
-          
+          <h2>{{ room.title }}</h2>
           <p class="desc">{{ room.desc }}</p>
-          
-          <ul class="features">
-            <li *ngFor="let f of room.features">✓ {{ f }}</li>
-          </ul>
-
-          <a routerLink="/booking" class="btn-book">Забронювати</a>
+          <span class="price">{{ room.price }} <small>/ ніч</small></span>
+          <div class="room-actions">
+            <a [routerLink]="['/rooms', room.id]" class="btn-details">Детальніше</a>
+            <button class="btn-book" (click)="openBooking()">Забронювати</button>
+          </div>
         </div>
       </div>
     </div>

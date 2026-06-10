@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router'; // Обов'язково для routerLink
+import { RouterModule } from '@angular/router';
+import { BookingModalService } from '../../services/booking-modal.service';
 
 @Component({
   selector: 'app-header',
@@ -10,9 +11,15 @@ import { RouterModule } from '@angular/router'; // Обов'язково для 
   styleUrl: './header.css'
 })
 export class HeaderComponent {
-  isMenuOpen = false; // Для мобільного меню (на майбутнє)
+  isMenuOpen = false;
+
+  constructor(private bookingModal: BookingModalService) {}
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  openBooking() {
+    this.bookingModal.open();
   }
 }

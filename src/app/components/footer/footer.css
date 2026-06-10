@@ -16,6 +16,14 @@
 }
 
 /* Заголовки */
+.footer-logo-img {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 12px;
+  display: block;
+}
+
 .footer-logo {
   font-family: 'Playfair Display', serif;
   color: #c5a059;
@@ -31,6 +39,27 @@ h3 {
   text-transform: uppercase;
   border-left: 3px solid #c5a059;
   padding-left: 10px;
+}
+
+/* Навігація */
+.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-list li {
+  margin-bottom: 10px;
+}
+
+.nav-list a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-list a:hover {
+  color: #c5a059;
 }
 
 /* Контакти */
@@ -61,23 +90,6 @@ h3 {
   color: #c5a059;
 }
 
-/* Карта (стилізація) */
-.map-wrapper {
-  border: 1px solid #333;
-  border-radius: 4px;
-  overflow: hidden;
-  height: 200px;
-}
-
-/* Робимо карту чорно-білою, щоб не різала очі */
-.map-wrapper iframe {
-  filter: grayscale(100%) invert(90%) contrast(85%);
-  transition: filter 0.5s;
-}
-
-.map-wrapper:hover iframe {
-  filter: none; /* При наведенні стає кольоровою */
-}
 
 /* Нижній рядок */
 .footer-bottom {

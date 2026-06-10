@@ -1,0 +1,57 @@
+<section class="room-detail-page" *ngIf="room; else notFound">
+  <div class="container">
+
+    <a routerLink="/rooms" class="back-link">← Усі номери</a>
+
+    <div class="room-detail-layout">
+
+      <div class="room-detail-image">
+        <img [src]="room.image" [alt]="room.title">
+      </div>
+
+      <div class="room-detail-info">
+        <h1>{{ room.title }}</h1>
+
+        <div class="room-badges">
+          <span class="badge">{{ room.size }}</span>
+          <span class="badge" *ngIf="room.bathroom">{{ room.bathroom }}</span>
+          <span class="badge" *ngIf="room.view">{{ room.view }}</span>
+        </div>
+
+        <p class="room-desc">{{ room.desc }}</p>
+
+        <p class="room-beds"><strong>Ліжка:</strong> {{ room.beds }}</p>
+
+        <div class="amenities-block">
+          <h3>У ванній кімнаті:</h3>
+          <ul class="amenities-list">
+            <li *ngFor="let a of room.bathroomAmenities">✓ {{ a }}</li>
+          </ul>
+        </div>
+
+        <div class="amenities-block">
+          <h3>Зручності у номері:</h3>
+          <ul class="amenities-list two-col">
+            <li *ngFor="let a of room.roomAmenities">✓ {{ a }}</li>
+          </ul>
+        </div>
+
+        <p class="smoking"><strong>Куріння:</strong> {{ room.smoking }}</p>
+
+        <div class="detail-footer">
+          <span class="price">{{ room.price }} <small>/ ніч</small></span>
+          <button class="btn-book" (click)="openBooking()">Забронювати</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<ng-template #notFound>
+  <div class="not-found">
+    <p>Номер не знайдено.</p>
+    <a routerLink="/rooms">← Усі номери</a>
+  </div>
+</ng-template>

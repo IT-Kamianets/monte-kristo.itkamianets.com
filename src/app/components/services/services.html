@@ -1,10 +1,26 @@
-<section class="services">
-  <h2>Наші послуги</h2>
-  <div class="services-grid">
-    <div class="service-card" *ngFor="let s of services">
-      <div class="icon">{{ s.icon }}</div>
-      <h3>{{ s.title }}</h3>
-      <p>{{ s.desc }}</p>
+<section class="services-page">
+  <div class="container">
+    <h1 class="page-title">Послуги та зручності</h1>
+
+    <div class="popular-bar">
+      <h2 class="popular-title">Найпопулярніші зручності</h2>
+      <div class="popular-list">
+        <span class="popular-item" *ngFor="let item of popular">✓ {{ item }}</span>
+      </div>
+    </div>
+
+    <div class="categories-grid">
+      <div class="category-card" *ngFor="let cat of categories">
+        <h3 class="category-title">{{ cat.title }}</h3>
+        <p class="category-note" *ngIf="cat.note">{{ cat.note }}</p>
+        <ul class="category-list" *ngIf="cat.items.length > 0">
+          <li *ngFor="let item of cat.items">
+            <span class="check">✓</span>
+            <span class="item-label">{{ item.label }}</span>
+            <span class="item-extra" *ngIf="item.extra">{{ item.extra }}</span>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>

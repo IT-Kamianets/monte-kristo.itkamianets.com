@@ -35,6 +35,12 @@
   text-transform: uppercase;
 }
 
+.header-logo {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+}
+
 .nav-links {
   display: flex;
   gap: 30px;

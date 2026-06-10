@@ -2,15 +2,18 @@
   <div class="container">
     <a routerLink="/" class="logo">MONTE CRISTO</a>
 
+    <img src="assets/logo.png" alt="Monte Cristo" class="header-logo">
+
     <nav class="nav-links">
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Головна</a>
       <a routerLink="/rooms" routerLinkActive="active">Номери</a>
       <a routerLink="/services" routerLinkActive="active">Послуги</a>
       <a routerLink="/gallery" routerLinkActive="active">Галерея</a>
+      <a routerLink="/contacts" routerLinkActive="active">Контакти</a>
     </nav>
 
     <div class="nav-actions">
-      <a routerLink="/booking" class="btn-book">Забронювати</a>
+      <button class="btn-book" (click)="openBooking()">Забронювати</button>
     </div>
   </div>
 </header>
